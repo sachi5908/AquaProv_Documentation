@@ -1,0 +1,35 @@
+html { color-scheme: light; scroll-behavior: smooth; }
+body { max-width: 760px; margin: 40px auto; padding: 0 24px; color: #171d22; background: white; font: 17px/1.65 Georgia, 'Times New Roman', serif; }
+header { text-align: center; margin: 60px 0; }
+header img { max-width: 85%; height: auto; }
+a { color: #226884; overflow-wrap: anywhere; }
+nav { padding: 24px; background: #f1f5f7; }
+nav a { display: block; margin: 7px 0; }
+.chapter { margin-top: 80px; overflow-wrap: anywhere; }
+.chapter h1 { color: #287c9f; border-block: 1px solid #b3cbd6; padding: 16px 0; font-size: 25px; }
+h2 { margin-top: 32px; font-size: 21px; }
+h3 { font-size: 18px; }
+img { max-width: 100%; height: auto; }
+figure { margin: 28px 0; break-inside: avoid; }
+figcaption { font-size: 14px; font-style: italic; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { padding: 8px; text-align: left; border-bottom: 1px solid #ccd6dc; vertical-align: top; overflow-wrap: anywhere; }
+th { background: #e8f0f4; }
+.plot-inputs { table-layout: fixed; }
+.plot-inputs th:nth-child(1) { width: 23%; }
+.plot-inputs th:nth-child(2) { width: 32%; }
+.plot-inputs th:nth-child(3) { width: 27%; }
+.plot-inputs th:nth-child(4) { width: 18%; }
+.installer-steps { display: block; }
+.installer-steps .installer-figure { margin: 20px 0; }
+.installer-figure img { display: block; width: min(100%, 580px); margin: 0 auto; }
+.installer-figure figcaption { margin-top: 6px; }
+pre { padding: 12px; background: #f1f4f5; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 13px; }
+@media (max-width: 600px) { body { padding: 0 18px; } table { display: block; overflow: auto; } }
+@media print { body { max-width: none; font: 11pt/1.2 'Times New Roman', serif; } .chapter { break-before: page; } nav { display: none; } a { color: inherit; } }
+@media print { .installer-steps { break-inside: auto; } .installer-figure { break-inside: avoid; } }
+.reference-list .ref{margin:0 0 1em;break-inside:avoid}
+.reference-list .ref p{padding-left:1.6em;text-indent:-1.6em}
+.equation{text-align:center;break-inside:avoid;margin:1em 0;line-height:1.7}
+a.citation{color:inherit;text-decoration:none}
+a.citation:hover{text-decoration:underline}
