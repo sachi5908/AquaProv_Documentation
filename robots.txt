@@ -1,0 +1,3 @@
+# AquaProv public documentation. Add a Sitemap URL after choosing the Pages host.
+User-agent: *
+Allow: /
