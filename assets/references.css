@@ -1,0 +1,15 @@
+/* APA author-year references, readable offline and in either site theme. */
+.article .apa-references { border-top: 1px solid var(--line); padding-top: 28px; }
+.article .apa-references .ref { margin: 0 0 1rem; scroll-margin-top: 110px; }
+.article .apa-references .ref p { font-size: .93rem; line-height: 2; padding-left: 2em; text-indent: -2em; }
+.article .apa-references a { overflow-wrap: anywhere; }
+.article .apa-references .ref:target { background: var(--soft); outline: 2px solid var(--line); outline-offset: 6px; }
+.article a.citation { text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.article a.citation:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+@media print {
+  .article .apa-references { border-top: 0; }
+  .article .apa-references h2 { break-after: avoid; }
+  .article .apa-references .ref { break-inside: avoid; margin-bottom: 0; }
+  .article .apa-references .ref p { padding-left: .5in; text-indent: -.5in; font-size: 10pt; line-height: 2; }
+  .article .citation, .article .apa-references a { color: inherit; text-decoration: none; }
+}

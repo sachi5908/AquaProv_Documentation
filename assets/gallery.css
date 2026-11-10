@@ -1,0 +1,57 @@
+/* Final plot previews and direct guide links, scoped to the documentation gallery. */
+.gallery-page .gallery-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 16px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: linear-gradient(150deg, var(--surface), var(--home-card));
+  box-shadow: var(--card-shadow);
+}
+.gallery-controls label { display: flex; flex-direction: column; gap: 7px; font-size: .8rem; font-weight: 600; }
+.gallery-controls :is(select, input) {
+  width: 100%;
+  min-width: 0;
+  height: 46px;
+  padding: 10px 16px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  color: var(--ink);
+  background: var(--surface);
+  font: inherit;
+}
+.gallery-page [data-gallery-count] { margin: 14px 0 28px; }
+.gallery-page .gallery-module { margin-top: 42px; }
+.gallery-module-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 20px; }
+.gallery-module-heading .eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 9px; font: 500 10px/1.5 Consolas, monospace; letter-spacing: 1.6px; }
+.gallery-module-heading .eyebrow::before { content: ''; width: 6px; height: 6px; border: 1px solid currentColor; border-radius: 2px; transform: rotate(45deg); }
+.gallery-page .gallery-module-heading h2 { margin: 0; font-size: 1.55rem; }
+.gallery-module-count { padding: 5px 11px; border: 1px solid var(--line); border-radius: 24px; background: var(--surface); color: var(--muted); font-size: .75rem; white-space: nowrap; }
+.gallery-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.gallery-card { min-width: 0; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 22px; background: linear-gradient(150deg, var(--surface), var(--home-card)); box-shadow: var(--card-shadow); overflow: hidden; scroll-margin-top: 104px; transition: border-color .25s, box-shadow .25s; }
+.gallery-card:hover, .gallery-card:focus-within { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); box-shadow: 0 10px 30px #153b2806; }
+.gallery-card figure { margin: 0; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: #fff; }
+.gallery-page .gallery-card img.figure-img { display: block; width: 100%; height: 275px; max-height: none; padding: 14px; border: 0; border-radius: 0; object-fit: contain; background: #fff; }
+.gallery-card figcaption { margin: 0; padding: 12px 18px; background: var(--home-card); font-size: .7rem; color: var(--muted); }
+.gallery-card-copy { display: flex; flex-direction: column; flex: 1; align-items: flex-start; padding: 22px; }
+.gallery-page .gallery-card h3 { margin: 0 0 10px; font-size: 1.1rem; line-height: 1.4; }
+.gallery-page .gallery-card p { margin: 0 0 22px; color: var(--muted); font-size: .8rem; line-height: 1.7; }
+.gallery-guide { margin-top: auto; gap: 18px; font-size: .8rem; }
+.gallery-page .gallery-card:target { outline: 2px solid var(--accent); outline-offset: 3px; }
+@media (max-width: 1100px) and (min-width: 901px), (max-width: 650px) {
+  .gallery-grid { grid-template-columns: minmax(0, 1fr); }
+  .gallery-page .gallery-controls { grid-template-columns: minmax(0, 1fr); }
+  .gallery-controls button { justify-self: start; }
+}
+@media (max-width: 650px) {
+  .gallery-page .gallery-controls { padding: 20px; border-radius: 20px; }
+  .gallery-module-heading { flex-wrap: wrap; gap: 12px; }
+  .gallery-card { border-radius: 20px; }
+}
+@media print {
+  .gallery-grid { display: block; }
+  .gallery-card { break-inside: avoid; margin-bottom: 24px; }
+  .gallery-page .gallery-card img.figure-img { height: 260px; }
+}

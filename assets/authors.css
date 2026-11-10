@@ -1,0 +1,25 @@
+/* Author portraits use the same local, theme-aware cards as the guide. */
+.author-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.author {
+  break-inside: avoid;
+}
+
+.author-photo {
+  display: block;
+  width: 160px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
+@media (max-width: 540px) {
+  .author-grid {
+    grid-template-columns: 1fr;
+  }
+}

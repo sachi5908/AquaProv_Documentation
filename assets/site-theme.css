@@ -1,0 +1,318 @@
+/* Shared AquaProv identity. Load after page styles on every HTML page. */
+:root {
+  --bg: #f7f9f5;
+  --surface: #fffefa;
+  --soft: #eaf1e9;
+  --ink: #193e37;
+  --muted: #617268;
+  --line: #dce4d9;
+  --accent: #16715b;
+  --accent-dark: #0b5342;
+  --navy: #193e37;
+  --coral: #a65c2e;
+  --home-card: #eef3ec;
+  --hero-glow: #bee6d366;
+  --sidebar-bg: var(--home-card);
+  --sidebar-current: var(--surface);
+  --button-bg: linear-gradient(120deg, #237c61, #174e3c);
+  --button-hover: linear-gradient(120deg, #206b55, #103e2f);
+  --button-ink: #fffefa;
+  --shadow: 0 16px 50px #173e300c;
+  --radius: 14px;
+  --header: 84px;
+}
+:root[data-theme="dark"] {
+  --bg: #101e1a;
+  --surface: #162821;
+  --soft: #20372d;
+  --ink: #e5eee4;
+  --muted: #a8b9ad;
+  --line: #30473a;
+  --accent: #95d9b5;
+  --accent-dark: #bbebcf;
+  --navy: #e5eee4;
+  --coral: #e1b078;
+  --home-card: #1b3026;
+  --hero-glow: #287a5033;
+  --button-bg: linear-gradient(120deg, #24694f, #194b39);
+  --button-hover: linear-gradient(120deg, #2b7659, #205940);
+  --shadow: 0 16px 50px #0002;
+}
+
+/* Guide pages follow the existing home.css palette without changing the home. */
+.docs-page {
+  --bg: #f7faf8;
+  --surface: #fff;
+  --soft: #eaf3ef;
+  --ink: #123b35;
+  --muted: #5d746d;
+  --line: #d8e5de;
+  --accent: #087f70;
+  --accent-dark: #085c51;
+  --navy: var(--ink);
+  --home-card: #f0f6f2;
+  --card-shadow: 0 4px 8px #123b3503, 0 18px 50px #123b3507;
+  --shadow: var(--card-shadow);
+  --sidebar-bg: var(--home-card);
+  --sidebar-current: var(--surface);
+  --button-bg: linear-gradient(135deg, #197c65, #0d4c43);
+  --button-hover: linear-gradient(135deg, #198971, #0a5d50);
+  --button-ink: #fff;
+  --guide-glow: #bce9d747;
+  --guide-blue-glow: #aadfeb3d;
+  --header: 80px;
+}
+[data-theme="dark"] .docs-page {
+  --bg: #0b1b18;
+  --surface: #122a24;
+  --soft: #1a352d;
+  --ink: #edf3ed;
+  --muted: #a5b8ac;
+  --line: #2c4035;
+  --accent: #8ddac0;
+  --accent-dark: #b4edd8;
+  --home-card: #14241d;
+  --card-shadow: 0 16px 45px #0002;
+  --guide-glow: #25654830;
+  --guide-blue-glow: #22728928;
+}
+
+/* The same masthead, logo, navigation and controls on home and guide pages. */
+:is(.home-page, .docs-page) .site-header {
+  height: var(--header);
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  box-shadow: none;
+}
+.site-header .header-inner {
+  max-width: 1376px;
+  padding: 0 64px;
+  gap: 32px;
+}
+.site-brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 16px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.site-brand img { display: block; width: 151px; height: auto; max-height: 60px; object-fit: contain; }
+.site-brand small { padding-left: 14px; border-left: 1px solid var(--line); color: var(--muted); font-size: 8px; letter-spacing: 1.5px; }
+[data-theme="dark"] .site-brand img { background: #fff; border-radius: 5px; padding: 4px; }
+.site-header .top-nav { gap: 28px; }
+.site-header .top-nav a { color: var(--muted); font-size: 12px; font-weight: 500; }
+.site-header .top-nav a:hover, .site-header .top-nav a[aria-current="page"] { color: var(--accent-dark); }
+.site-header .top-nav a[aria-current="page"]::after { bottom: -32px; height: 2px; background: var(--accent); }
+.site-header .header-tools { gap: 10px; }
+.site-header .pdf-manual-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .3em;
+  min-height: 40px;
+  padding: 8px 15px;
+  border: 1px solid var(--accent);
+  border-radius: 24px;
+  background: var(--soft);
+  color: var(--accent-dark);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.site-header .pdf-manual-button:hover,
+.site-header .pdf-manual-button[aria-current="page"] {
+  background: var(--button-bg);
+  color: var(--button-ink);
+}
+@media (max-width: 1100px) {
+  .site-header .pdf-manual-button { min-width: 40px; padding-inline: 8px; }
+  .site-header .pdf-manual-button .manual-label-rest { display: none; }
+}
+.site-header :is(.icon-btn, .menu-btn, .search-trigger) {
+  min-height: 40px;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  color: var(--ink);
+}
+.site-header :is(.icon-btn, .menu-btn) { width: 40px; }
+.site-header .search-trigger { width: auto; min-width: 68px; padding: 5px 9px; gap: 10px; }
+.site-header .search-trigger .line-icon { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; }
+.site-header .search-trigger kbd { font-size: 11px; border: 0; background: var(--soft); }
+.site-header :is(.icon-btn, .menu-btn, .search-trigger):hover { background: var(--soft); border-color: var(--accent); }
+:is(.home-page, .docs-page) :is(a, button, input, select, summary):focus-visible { outline-color: var(--accent); }
+
+/* Match the home's translucent masthead, pill navigation and round controls. */
+.docs-page .site-header {
+  background: color-mix(in srgb, var(--bg) 86%, transparent);
+  border-bottom-color: color-mix(in srgb, var(--line) 65%, transparent);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.docs-page .header-inner { gap: 32px; }
+.docs-page .site-brand img { width: 140px; max-height: 56px; }
+.docs-page .site-brand small { letter-spacing: 1.7px; }
+.docs-page .site-header .top-nav { gap: 5px; }
+.docs-page .site-header .top-nav a {
+  padding: 8px 14px;
+  border-radius: 24px;
+  transition: background .2s, color .2s;
+}
+.docs-page .site-header .top-nav a:hover,
+.docs-page .site-header .top-nav a[aria-current="page"] { background: var(--soft); color: var(--accent-dark); }
+.docs-page .site-header .top-nav a[aria-current="page"]::after { display: none; }
+.docs-page .site-header .header-tools { gap: 8px; }
+.docs-page .site-header :is(.icon-btn, .menu-btn, .search-trigger) { border-radius: 50px; }
+
+/* Carry the home's soft backgrounds and card treatment into reading surfaces. */
+.docs-page .article {
+  background: radial-gradient(ellipse 560px 300px at 10% 0, var(--guide-glow), transparent), radial-gradient(ellipse 520px 300px at 100% 0, var(--guide-blue-glow), transparent);
+}
+.docs-page .article > .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 15px;
+  border: 1px solid var(--line);
+  border-radius: 40px;
+  background: color-mix(in srgb, var(--surface) 75%, transparent);
+  box-shadow: 0 3px 12px #173e3004;
+  font: 500 10px/1.6 Consolas, monospace;
+  letter-spacing: 1.5px;
+}
+.docs-page .article > .eyebrow::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 9%, transparent); }
+.docs-page .article h1 { font-weight: 550; letter-spacing: -.055em; }
+.docs-page .article :is(h2, h3) { font-weight: 550; letter-spacing: -.035em; }
+.docs-page .sidebar { background: linear-gradient(150deg, var(--surface), var(--home-card)); }
+.docs-page .sidebar a { border-radius: 14px; }
+.docs-page .sidebar a[aria-current="page"] { color: var(--accent-dark); }
+.docs-page .sidebar .nav-group-title { color: var(--accent); font-weight: 500; }
+.docs-page :is(.doc-card, .author) {
+  border-radius: 22px;
+  background: linear-gradient(150deg, var(--surface), var(--home-card));
+  box-shadow: var(--card-shadow);
+  transition: border-color .25s, box-shadow .25s;
+}
+.docs-page .doc-card:hover { color: var(--ink); border-color: var(--accent); box-shadow: 0 10px 30px #153b2806; }
+.docs-page :is(.table-wrap, .module-summary, .interactive-panel, .equation, .article > section > figure, .article > figure) { border-radius: 20px; }
+.docs-page .callout { border-radius: 0 20px 20px 0; }
+.docs-page .toc-panel { border-radius: 22px; background: linear-gradient(150deg, var(--surface), var(--home-card)); box-shadow: var(--card-shadow); }
+.docs-page .toc-heading { font: 500 11px/1.5 Consolas, monospace; color: var(--accent); }
+.docs-page :is(.toc, .page-tools) .toc-links a,
+.docs-page .toc .toc-links a.active { border-radius: 12px; }
+.docs-page .page-tools .page-contents { border-radius: 22px; overflow: hidden; }
+.docs-page :is(dialog, .search-input) { border-radius: 20px; }
+:is(.home-page, .docs-page) .button,
+.home-page .home-button.primary,
+.home-page .hero-download-actions .hero-action-download {
+  border-color: var(--accent);
+  border-radius: 40px;
+  background: var(--button-bg);
+  color: var(--button-ink);
+}
+:is(.home-page, .docs-page) .button:hover,
+.home-page .home-button.primary:hover,
+.home-page .hero-download-actions .hero-action-download:hover { background: var(--button-hover); color: var(--button-ink); }
+:is(.home-page, .docs-page) .button.secondary { border-color: var(--line); background: var(--surface); color: var(--ink); }
+:is(.home-page, .docs-page) .button.secondary:hover { border-color: var(--accent); background: var(--soft); color: var(--accent-dark); }
+.docs-page .page-print { border-radius: 40px; }
+.docs-page .button {
+  border-color: #146851;
+  font-weight: 550;
+  box-shadow: inset 0 1px 0 #ffffff29, 0 6px 16px #14685124;
+  transition: background .2s, border-color .2s, box-shadow .2s;
+}
+.docs-page .button:hover { border-color: #16836e; transform: none; box-shadow: inset 0 1px 0 #ffffff29, 0 8px 24px #14685138; }
+.docs-page .button.secondary { background: color-mix(in srgb, var(--surface) 88%, transparent); box-shadow: 0 3px 8px #123b3505; }
+.docs-page .button.secondary:hover { color: var(--ink); }
+.docs-page pre { border-radius: 20px; background: #123b35; color: #edf6ef; }
+.docs-page .copy-btn { background: #285746; border-color: #537868; }
+.docs-page .site-footer {
+  border-top: 1px solid #356859;
+  border-radius: 32px 32px 0 0;
+  background: url("https://res.cloudinary.com/hz875hgf/image/upload/v1794292703/aquaprov/docs/a4eac64834612c3b/assets/images/home/water-contours.svg") right bottom / 1500px auto no-repeat, radial-gradient(ellipse at 0 0, #214c3d, transparent 55%), #102d27;
+  color: #b4ccc1;
+}
+.docs-page .site-footer a { color: #8bdcbd; }
+.docs-page .site-footer a:hover { color: #edf8f0; }
+.docs-page .footer-inner { align-items: center; }
+.docs-page .footer-legal { text-align: right; }
+.docs-page .footer-legal p { margin: 0; }
+.docs-page .footer-legal p + p { margin-top: 4px; }
+
+@media (max-width: 850px) {
+  .docs-page .footer-inner { align-items: flex-start; }
+  .docs-page .footer-legal { text-align: left; }
+}
+
+@media (max-width: 1150px) {
+  .site-header .header-inner { padding-inline: 36px; gap: 24px; }
+  .site-brand small { display: none; }
+  .site-header .top-nav { gap: 22px; }
+  .docs-page .site-header .top-nav { gap: 3px; }
+  .docs-page .site-header .top-nav a { padding-inline: 10px; }
+}
+@media (max-width: 900px) {
+  .site-header .header-inner { gap: 18px; }
+  .site-header .top-nav { gap: 18px; }
+  .site-header .top-nav a { font-size: 11px; }
+  .site-header .search-trigger { width: 40px; min-width: 40px; }
+  .site-header .search-trigger kbd { display: none; }
+  .docs-page .header-inner { gap: 20px; }
+  .docs-page .site-header .top-nav { gap: 1px; }
+  /* Leave room for the guide's additional sidebar-menu button on tablets. */
+  .docs-page .site-header .top-nav a { padding-inline: 6px; }
+}
+@media (max-width: 680px) {
+  :root { --header: 70px; }
+  .site-header .header-inner { padding-inline: 23px; gap: 12px; }
+  .site-brand img { width: 131px; max-height: 53px; }
+  .site-header .header-tools { margin-left: auto; gap: 7px; }
+  .site-header :is(.icon-btn, .menu-btn, .search-trigger) { width: 40px; min-width: 40px; min-height: 40px; padding: 4px; }
+  .site-header .top-nav { display: none; }
+  .home-page .site-header .top-nav { top: var(--header); padding: 16px 23px; gap: 2px; }
+  .home-page .site-header .top-nav a { font-size: 14px; }
+  .site-header .top-nav a[aria-current="page"]::after { display: none; }
+  .no-js :is(.home-page, .docs-page) .site-header { height: auto; }
+  .no-js .site-header .header-inner { flex-wrap: wrap; padding-block: 15px; }
+  .no-js .site-header .top-nav { display: flex; position: static; flex-direction: row; flex-wrap: wrap; padding: 0; gap: 10px 18px; margin: 0; border: 0; box-shadow: none; background: transparent; }
+  .no-js .site-header .top-nav a { padding: 0; font-size: 12px; }
+  .docs-page { --header: 72px; }
+  .docs-page .header-inner { gap: 12px; }
+  .docs-page .site-brand img { width: 128px; }
+  .docs-page .site-header .header-tools { gap: 6px; }
+  .docs-page .site-header :is(.icon-btn, .menu-btn, .search-trigger) { width: 36px; min-width: 36px; min-height: 36px; }
+  .docs-page .site-header .menu-btn { font-size: 17px; }
+  .docs-page .site-footer { border-radius: 24px 24px 0 0; }
+  .no-js .docs-page .site-header .top-nav a { padding: 4px 0; font-size: 11px; }
+}
+@media (max-width: 360px) {
+  .site-header .header-inner { padding-inline: 17px; }
+  .site-brand img { width: 120px; }
+  .site-header .header-tools { gap: 4px; }
+  .docs-page .site-brand img { width: 111px; }
+  .docs-page .site-header .header-tools { gap: 4px; }
+}
+@media (max-width: 680px) {
+  .site-header .pdf-manual-button { min-width: 36px; min-height: 36px; padding: 6px; font-size: 10px; }
+}
+@media (max-width: 360px) {
+  :is(.home-page, .docs-page) .site-header .site-brand img { width: 104px; }
+}
+@media print {
+  .docs-page, [data-theme="dark"] .docs-page {
+    --bg: #fff;
+    --surface: #fff;
+    --soft: #f3f5f2;
+    --ink: #193e37;
+    --muted: #53655b;
+    --line: #dce4d9;
+    --accent: #0b5342;
+    --accent-dark: #0b5342;
+    --home-card: #fff;
+  }
+  .docs-page .article { background: none; }
+  .docs-page pre { background: #f3f5f2; color: #193e37; }
+}

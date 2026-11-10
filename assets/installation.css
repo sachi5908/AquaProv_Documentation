@@ -1,0 +1,91 @@
+/* Requirements, setup screenshots and terminal examples for installation. */
+.installation-page .installer-figure { max-width: 640px; margin: 24px auto 32px; }
+.installation-page .installer-figure .figure-img { padding: 0; }
+.installation-page .system-requirements-table table {
+  width: 100%;
+  min-width: 620px;
+  table-layout: fixed;
+}
+.installation-page .requirement-component { width: 23%; }
+.installation-page .requirement-minimum { width: 33%; }
+.installation-page .requirement-recommended { width: 44%; }
+.installation-page .system-requirements-table :is(th, td) {
+  padding: 13px 16px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  vertical-align: middle;
+  font-size: .875rem;
+  line-height: 1.65;
+  overflow-wrap: break-word;
+}
+.installation-page .system-requirements-table tr > :last-child { border-right: 0; }
+.installation-page .system-requirements-table tbody tr:last-child > * { border-bottom: 0; }
+.installation-page .system-requirements-table tbody th {
+  color: var(--ink);
+  font-weight: 550;
+  letter-spacing: normal;
+  text-align: left;
+  text-transform: none;
+}
+.installation-page .system-requirements-table tbody tr:nth-child(even) { background: var(--soft); }
+
+.installation-page .terminal-window {
+  --terminal-bg: #0c0c0c;
+  --terminal-bar: #202020;
+  position: relative;
+  margin: 22px 0;
+  overflow: hidden;
+  border: 1px solid #444;
+  border-radius: 12px;
+  background: var(--terminal-bg);
+  color: #f2f2f2;
+  box-shadow: 0 4px 12px #00000012;
+}
+.installation-page .terminal-header {
+  min-height: 46px;
+  padding: 12px 120px 12px 16px;
+  border-bottom: 1px solid #ffffff20;
+  background: var(--terminal-bar);
+  color: #e1e1e1;
+  font: 12px/1.8 'Segoe UI', Arial, sans-serif;
+}
+.installation-page .terminal-window pre {
+  position: static;
+  margin: 0;
+  padding: 20px;
+  border-radius: 0;
+  background: var(--terminal-bg);
+  color: inherit;
+}
+.installation-page .terminal-window .copy-btn {
+  top: 10px;
+  right: 12px;
+  border-color: #ffffff50;
+  background: #ffffff12;
+}
+.installation-page .terminal-macos {
+  --terminal-bg: #1c1c1e;
+  --terminal-bar: #2d2d2f;
+}
+.installation-page .terminal-linux {
+  --terminal-bg: #300a24;
+  --terminal-bar: #43313f;
+}
+.installation-page .terminal-macos .terminal-header::before {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-right: 34px;
+  border-radius: 50%;
+  background: #ff5f56;
+  box-shadow: 14px 0 #ffbd2e, 28px 0 #27c93f;
+  content: '';
+}
+@media print {
+  .installation-page .system-requirements-table table { min-width: 0; }
+  .installation-page .system-requirements-table :is(th, td) { padding: 8px 10px; font-size: 9pt; }
+  .installation-page .terminal-window { border-color: #bbb; background: #fff; color: #193e37; }
+  .installation-page .terminal-header { border-color: #ddd; background: #f3f5f2; color: #193e37; }
+  .installation-page .terminal-window pre { background: #fff; color: #193e37; white-space: pre-wrap; }
+  .installation-page .terminal-macos .terminal-header::before { display: none; }
+}

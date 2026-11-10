@@ -1,0 +1,46 @@
+/* Local, selectable equations: no remote fonts or math-rendering service. */
+.plot-mathematics { min-width: 0; }
+.plot-mathematics h3 { margin-top: 2rem; scroll-margin-top: 110px; }
+.math-intro { color: var(--muted); }
+.math-contents {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--soft);
+  font-size: .85rem;
+}
+.math-equation {
+  margin: 1.2rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  background: var(--soft);
+  color: var(--ink);
+  font-family: 'Cambria Math', Cambria, 'Segoe UI', serif;
+  font-size: 1.08rem;
+  line-height: 2;
+  overflow-wrap: anywhere;
+}
+.plot-mathematics code { overflow-wrap: anywhere; }
+.plot-mathematics .table-wrap { margin: 1.2rem 0; overflow-x: auto; }
+.plot-mathematics th, .plot-mathematics td { vertical-align: top; }
+@media (max-width: 700px) {
+  .math-equation { padding: .8rem; font-size: 1rem; }
+  .math-contents { padding: .8rem; }
+}
+@media print {
+  .math-contents { display: none; }
+  .math-equation {
+    color: #111;
+    background: #f4f6f6;
+    border-color: #456;
+    break-inside: avoid;
+    font-size: 10pt;
+  }
+  .plot-mathematics h3 { break-after: avoid; }
+  .plot-mathematics .table-wrap { overflow: visible; }
+  .plot-mathematics table { font-size: 9pt; }
+}

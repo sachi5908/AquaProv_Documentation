@@ -1,0 +1,104 @@
+/* Web implementation of the UIView-Shimmer loading treatment. */
+:root {
+  --shimmer-base: #e1ebe6;
+  --shimmer-light: #ffffffb3;
+}
+[data-theme="dark"] {
+  --shimmer-base: #284239;
+  --shimmer-light: #9bcab62b;
+}
+@keyframes aquaprov-shimmer {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100%); }
+}
+
+/* Reserve the image's own declared dimensions, then cover only its media area. */
+.media-shell { position: relative; min-width: 0; overflow: hidden; }
+.media-shell-portrait { width: min(160px, 100%); border-radius: 18px; }
+.media-loading > :is(img, iframe) { opacity: 0; }
+.media-loading::before, .media-loading::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.media-loading::before { background: var(--shimmer-base); }
+.media-loading::after {
+  background: linear-gradient(105deg, transparent 25%, var(--shimmer-light) 50%, transparent 75%);
+  transform: translateX(-100%);
+}
+.media-loading.is-near::after { animation: aquaprov-shimmer 1.8s ease-in-out infinite; }
+.media-shell > :is(img, iframe) { transition: opacity 180ms ease-out; }
+.lightbox .media-loading { min-height: 180px; }
+
+/* The actual text keeps its layout and accessibility while page scripts prepare it. */
+.page-preparing :is(
+  h1, h2, h3, h4, p, figcaption, th, td, label, button, summary, .math-contents a,
+  .eyebrow, .breadcrumb, .nav-link-text, .nav-module-name,
+  .toc-heading, .toc-links a, .top-nav a, .footer-inner,
+  .home-footer-column li, .page-print, .button, .home-button,
+  .icon-btn, .search-trigger, .menu-btn, .pdf-manual-button,
+  figure, .screenshot-frame, .manual-reader, .showcase-video, .media-shell
+) {
+  position: relative;
+  overflow: hidden;
+  color: transparent !important;
+  border-color: transparent !important;
+}
+.page-preparing :is(
+  h1, h2, h3, h4, p, figcaption, th, td, label, button, summary, .math-contents a,
+  .eyebrow, .breadcrumb, .nav-link-text, .nav-module-name,
+  .toc-heading, .toc-links a, .top-nav a, .footer-inner,
+  .home-footer-column li, .page-print, .button, .home-button,
+  .icon-btn, .search-trigger, .menu-btn, .pdf-manual-button,
+  figure, .screenshot-frame, .manual-reader, .showcase-video, .media-shell
+) > * { visibility: hidden; }
+.page-preparing :is(
+  h1, h2, h3, h4, p, figcaption, th, td, label, button, summary, .math-contents a,
+  .eyebrow, .breadcrumb, .nav-link-text, .nav-module-name,
+  .toc-heading, .toc-links a, .top-nav a, .footer-inner,
+  .home-footer-column li, .page-print, .button, .home-button,
+  .icon-btn, .search-trigger, .menu-btn, .pdf-manual-button,
+  figure, .screenshot-frame, .manual-reader, .showcase-video, .media-shell
+)::after {
+  content: '';
+  position: absolute;
+  inset: .15em 0;
+  z-index: 2;
+  border-radius: 6px;
+  pointer-events: none;
+  background: linear-gradient(105deg, var(--shimmer-base) 25%, var(--shimmer-light) 50%, var(--shimmer-base) 75%);
+  background-size: 200% 100%;
+  animation: aquaprov-shimmer-text 1.8s ease-in-out infinite;
+}
+@keyframes aquaprov-shimmer-text {
+  from { background-position: 100% 0; }
+  to { background-position: -100% 0; }
+}
+.page-preparing :is(p, figcaption)::after {
+  mask-image: repeating-linear-gradient(to bottom, #000 0 .75em, transparent .75em 1.75em);
+}
+.page-preparing :is(figure, .screenshot-frame, .manual-reader, .showcase-video, .media-shell)::after { inset: 0; }
+.page-preparing :is(input, select) {
+  color: transparent !important;
+  background: linear-gradient(105deg, var(--shimmer-base) 25%, var(--shimmer-light) 50%, var(--shimmer-base) 75%);
+  background-size: 200% 100%;
+  animation: aquaprov-shimmer-text 1.8s ease-in-out infinite;
+}
+.page-preparing input::placeholder { color: transparent; }
+
+/* Large galleries defer offscreen rendering as well as image downloads. */
+.gallery-card { content-visibility: auto; contain-intrinsic-size: auto 550px; }
+.gallery-card:target, .gallery-card:focus-within { content-visibility: visible; }
+@media (prefers-reduced-motion: reduce) {
+  .media-shell > :is(img, iframe) { transition: none; }
+  .media-loading::after, .page-preparing *::after, .page-preparing :is(input, select) { animation: none !important; }
+}
+@media print {
+  .gallery-card { content-visibility: visible; contain-intrinsic-size: none; }
+  .media-shell { overflow: visible; }
+  .media-shell > :is(img, iframe) { opacity: 1 !important; }
+  .media-loading::before, .media-loading::after { display: none !important; }
+}
