@@ -17,31 +17,6 @@
     if (!event.target.closest('.site-header')) closeMenu();
   });
 
-  // Keep Vimeo controls available if the optional Vimeo API cannot load.
-  const videoFrame = document.querySelector('#showcase-player');
-  const videoPlay = document.querySelector('[data-video-play]');
-  const setupVideo = () => {
-    if (!videoFrame || !videoPlay || !window.Vimeo?.Player) return;
-    const player = new window.Vimeo.Player(videoFrame);
-    const hidePlay = () => {
-      if (document.activeElement === videoPlay) videoFrame.focus();
-      videoPlay.hidden = true;
-    };
-    const showPlay = () => { videoPlay.hidden = false; };
-    player.on('play', hidePlay);
-    player.on('pause', showPlay);
-    player.on('ended', showPlay);
-    videoPlay.addEventListener('click', () => {
-      hidePlay();
-      player.play().catch(hidePlay);
-    });
-    player.ready().then(() => player.getPaused()).then(paused => {
-      if (paused) showPlay();
-    }).catch(hidePlay);
-  };
-  if (window.Vimeo?.Player) setupVideo();
-  else document.querySelector('script[src="https://player.vimeo.com/api/player.js"]')?.addEventListener('load', setupVideo, { once: true });
-
   // One update per scroll frame; navigation and the native cursor remain intact.
   let scrollFrame = 0;
   const updateScroll = () => {
@@ -124,7 +99,7 @@
     let paused = false;
     let dark = root.dataset.theme === 'dark';
     const pointer = { x: -1000, y: -1000, active: false };
-    const running = () => effectsAllowed() && !paused && visible && !document.hidden && !suspended;
+    const running = () => effectsAllowed() && !paused && visible && !document.hidden && !document.fullscreenElement && !suspended;
     const palette = () => dark ? ['132,213,184', '112,177,195', '136,184,164'] : ['31,128,100', '35,132,159', '107,156,128'];
 
     const draw = (moving = false) => {
@@ -220,6 +195,7 @@
     reducedMotion.addEventListener('change', syncMotion);
     finePointer.addEventListener('change', syncMotion);
     document.addEventListener('visibilitychange', syncMotion);
+    document.addEventListener('fullscreenchange', syncMotion);
     const themeObserver = new MutationObserver(() => {
       dark = root.dataset.theme === 'dark';
       if (!running()) draw();
