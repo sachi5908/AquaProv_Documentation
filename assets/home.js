@@ -17,7 +17,7 @@
     if (!event.target.closest('.site-header')) closeMenu();
   });
 
-  // Keep native video controls available if the optional Vimeo API cannot load.
+  // Keep Vimeo controls available if the optional Vimeo API cannot load.
   const videoFrame = document.querySelector('#showcase-player');
   const videoPlay = document.querySelector('[data-video-play]');
   const setupVideo = () => {

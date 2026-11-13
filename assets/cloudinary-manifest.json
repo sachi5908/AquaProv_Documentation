@@ -2584,6 +2584,15 @@
       "content_type": "text/csv",
       "public_verified": true
     },
+    "assets/data/module-examples/measured-series/measured-series_series_observations.csv": {
+      "secure_url": "https://res.cloudinary.com/hz875hgf/raw/upload/v1794548218/aquaprov/docs/bf14ddb5290f3e0a/assets/data/module-examples/measured-series/measured-series_series_observations.csv",
+      "public_id": "aquaprov/docs/bf14ddb5290f3e0a/assets/data/module-examples/measured-series/measured-series_series_observations.csv",
+      "resource_type": "raw",
+      "sha256": "bf14ddb5290f3e0aed54d1c0ef86964c5b86e08259d1756a6634a05eacc21545",
+      "bytes": 2636,
+      "content_type": "text/csv",
+      "public_verified": true
+    },
     "assets/data/module-examples/si-bar/si-bar_all_saturation_indices.csv": {
       "secure_url": "https://res.cloudinary.com/hz875hgf/raw/upload/v1794292606/aquaprov/docs/c2d106389be7f694/assets/data/module-examples/si-bar/si-bar_all_saturation_indices.csv",
       "public_id": "aquaprov/docs/c2d106389be7f694/assets/data/module-examples/si-bar/si-bar_all_saturation_indices.csv",
@@ -3241,6 +3250,15 @@
       "content_type": "text/csv",
       "public_verified": true
     },
+    "assets/data/module-examples/sukinda-measured-series-input.csv": {
+      "secure_url": "https://res.cloudinary.com/hz875hgf/raw/upload/v1794548218/aquaprov/docs/00d093dea4db4074/assets/data/module-examples/sukinda-measured-series-input.csv",
+      "public_id": "aquaprov/docs/00d093dea4db4074/assets/data/module-examples/sukinda-measured-series-input.csv",
+      "resource_type": "raw",
+      "sha256": "00d093dea4db407459e2d4a1da2087310b082320acdee884def91dc4e2511d53",
+      "bytes": 574,
+      "content_type": "text/csv",
+      "public_verified": true
+    },
     "assets/data/module-examples/wqi-box/wqi-box_box_outliers.csv": {
       "secure_url": "https://res.cloudinary.com/hz875hgf/raw/upload/v1794292628/aquaprov/docs/9c25bc70c2e8b312/assets/data/module-examples/wqi-box/wqi-box_box_outliers.csv",
       "public_id": "aquaprov/docs/9c25bc70c2e8b312/assets/data/module-examples/wqi-box/wqi-box_box_outliers.csv",
@@ -3640,6 +3658,114 @@
     "assets/data/module-examples/wqi-dwqi-comparison/wqi-dwqi-comparison_WQI_standards.csv": {
       "secure_url": "https://res.cloudinary.com/hz875hgf/raw/upload/v1794292644/aquaprov/docs/f334339c26d74ba1/assets/data/module-examples/wqi-dwqi-comparison/wqi-dwqi-comparison_WQI_standards.csv",
       "public_id": "aquaprov/docs/f334339c26d74ba1/assets/data/module-examples/wqi-dwqi-comparison/wqi-dwqi-comparison_WQI_standards.csv",
+      "resource_type": "raw",
+      "sha256": "f334339c26d74ba1ab0bf6a2fa1bb90439777cea3cfeb788e94c8d3bea15d5fb",
+      "bytes": 1913,
+      "content_type": "text/csv",
+      "public_verified": true
+    },
+    "assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_calculation_report.csv": {
+      "secure_url": "https://res.cloudinary.com/hz875hgf/raw/upload/v1794548219/aquaprov/docs/de14e30774a7dc0f/assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_calculation_report.csv",
+      "public_id": "aquaprov/docs/de14e30774a7dc0f/assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_calculation_report.csv",
+      "resource_type": "raw",
+      "sha256": "de14e30774a7dc0f33580e2364641973fc4636ffdb9d0ca0129ad856fffda040",
+      "bytes": 786,
+      "content_type": "text/csv",
+      "public_verified": true
+    },
+    "assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_DWQI_classification_scheme.csv": {
+      "secure_url": "https://res.cloudinary.com/hz875hgf/raw/upload/v1794548218/aquaprov/docs/edc5b9731f73657b/assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_DWQI_classification_scheme.csv",
+      "public_id": "aquaprov/docs/edc5b9731f73657b/assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_DWQI_classification_scheme.csv",
+      "resource_type": "raw",
+      "sha256": "edc5b9731f73657bccf59a700c0eb6be5f219ebd46aaafeadfe8474e363ed20e",
+      "bytes": 449,
+      "content_type": "text/csv",
+      "public_verified": true
+    },
+    "assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_DWQI_compliance.csv": {
+      "secure_url": "https://res.cloudinary.com/hz875hgf/raw/upload/v1794548218/aquaprov/docs/8016c2cbb855f2af/assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_DWQI_compliance.csv",
+      "public_id": "aquaprov/docs/8016c2cbb855f2af/assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_DWQI_compliance.csv",
+      "resource_type": "raw",
+      "sha256": "8016c2cbb855f2af2038228e90dae1c09c8a068b12b5de66e2f0a91acdd381a2",
+      "bytes": 1311,
+      "content_type": "text/csv",
+      "public_verified": true
+    },
+    "assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_DWQI_parameter_contributions.csv": {
+      "secure_url": "https://res.cloudinary.com/hz875hgf/raw/upload/v1794548218/aquaprov/docs/db0a5f8e2ebbdabe/assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_DWQI_parameter_contributions.csv",
+      "public_id": "aquaprov/docs/db0a5f8e2ebbdabe/assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_DWQI_parameter_contributions.csv",
+      "resource_type": "raw",
+      "sha256": "db0a5f8e2ebbdabee106dd2371c37304080265ea3f800f8f70919bd0bc2ad2a2",
+      "bytes": 12445,
+      "content_type": "text/csv",
+      "public_verified": true
+    },
+    "assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_DWQI_samples.csv": {
+      "secure_url": "https://res.cloudinary.com/hz875hgf/raw/upload/v1794548218/aquaprov/docs/bf3193a4c14462de/assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_DWQI_samples.csv",
+      "public_id": "aquaprov/docs/bf3193a4c14462de/assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_DWQI_samples.csv",
+      "resource_type": "raw",
+      "sha256": "bf3193a4c14462def59e0bef249f3a1cbe160b2902c891741e8c60856121a7ca",
+      "bytes": 2766,
+      "content_type": "text/csv",
+      "public_verified": true
+    },
+    "assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_DWQI_standards.csv": {
+      "secure_url": "https://res.cloudinary.com/hz875hgf/raw/upload/v1794548218/aquaprov/docs/4336016a0136dc77/assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_DWQI_standards.csv",
+      "public_id": "aquaprov/docs/4336016a0136dc77/assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_DWQI_standards.csv",
+      "resource_type": "raw",
+      "sha256": "4336016a0136dc77aa7e890c5661f526986dd4bdd0f4fd771a9b2e5c34922067",
+      "bytes": 1832,
+      "content_type": "text/csv",
+      "public_verified": true
+    },
+    "assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_index_comparison.csv": {
+      "secure_url": "https://res.cloudinary.com/hz875hgf/raw/upload/v1794548220/aquaprov/docs/8da43146ff5981de/assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_index_comparison.csv",
+      "public_id": "aquaprov/docs/8da43146ff5981de/assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_index_comparison.csv",
+      "resource_type": "raw",
+      "sha256": "8da43146ff5981dea5649fb185aed199fb466630577fe7298620165291ceaf8d",
+      "bytes": 2372,
+      "content_type": "text/csv",
+      "public_verified": true
+    },
+    "assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_WQI_classification_scheme.csv": {
+      "secure_url": "https://res.cloudinary.com/hz875hgf/raw/upload/v1794548220/aquaprov/docs/ce01a732cf97d815/assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_WQI_classification_scheme.csv",
+      "public_id": "aquaprov/docs/ce01a732cf97d815/assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_WQI_classification_scheme.csv",
+      "resource_type": "raw",
+      "sha256": "ce01a732cf97d815e6ba6616fbfca2da7ecf538381da0d3dcce22559f5afb83e",
+      "bytes": 440,
+      "content_type": "text/csv",
+      "public_verified": true
+    },
+    "assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_WQI_compliance.csv": {
+      "secure_url": "https://res.cloudinary.com/hz875hgf/raw/upload/v1794548220/aquaprov/docs/8016c2cbb855f2af/assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_WQI_compliance.csv",
+      "public_id": "aquaprov/docs/8016c2cbb855f2af/assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_WQI_compliance.csv",
+      "resource_type": "raw",
+      "sha256": "8016c2cbb855f2af2038228e90dae1c09c8a068b12b5de66e2f0a91acdd381a2",
+      "bytes": 1311,
+      "content_type": "text/csv",
+      "public_verified": true
+    },
+    "assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_WQI_parameter_contributions.csv": {
+      "secure_url": "https://res.cloudinary.com/hz875hgf/raw/upload/v1794548220/aquaprov/docs/04f581ab93a1c6fd/assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_WQI_parameter_contributions.csv",
+      "public_id": "aquaprov/docs/04f581ab93a1c6fd/assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_WQI_parameter_contributions.csv",
+      "resource_type": "raw",
+      "sha256": "04f581ab93a1c6fd5f5e51596985ba58f927ebeff270830702331c1406264206",
+      "bytes": 17611,
+      "content_type": "text/csv",
+      "public_verified": true
+    },
+    "assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_WQI_samples.csv": {
+      "secure_url": "https://res.cloudinary.com/hz875hgf/raw/upload/v1794548220/aquaprov/docs/78c1b383e84446a7/assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_WQI_samples.csv",
+      "public_id": "aquaprov/docs/78c1b383e84446a7/assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_WQI_samples.csv",
+      "resource_type": "raw",
+      "sha256": "78c1b383e84446a7dde2a47b341e116238b628b2205e24bfe3cebbc1e44268a8",
+      "bytes": 2770,
+      "content_type": "text/csv",
+      "public_verified": true
+    },
+    "assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_WQI_standards.csv": {
+      "secure_url": "https://res.cloudinary.com/hz875hgf/raw/upload/v1794548220/aquaprov/docs/f334339c26d74ba1/assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_WQI_standards.csv",
+      "public_id": "aquaprov/docs/f334339c26d74ba1/assets/data/module-examples/wqi-dwqi-scatter/wqi-dwqi-scatter_WQI_standards.csv",
       "resource_type": "raw",
       "sha256": "f334339c26d74ba1ab0bf6a2fa1bb90439777cea3cfeb788e94c8d3bea15d5fb",
       "bytes": 1913,
@@ -5581,6 +5707,33 @@
       "content_type": "image/svg+xml",
       "public_verified": true
     },
+    "assets/images/modules/measured-series.pdf": {
+      "secure_url": "https://res.cloudinary.com/hz875hgf/raw/upload/v1794548220/aquaprov/docs/ea01fed110512f1f/assets/images/modules/measured-series.pdf",
+      "public_id": "aquaprov/docs/ea01fed110512f1f/assets/images/modules/measured-series.pdf",
+      "resource_type": "raw",
+      "sha256": "ea01fed110512f1faf76ca2a4fd75ab1715e67e67b4f11c391bb0f5a66ca8720",
+      "bytes": 14993,
+      "content_type": "application/pdf",
+      "public_verified": true
+    },
+    "assets/images/modules/measured-series.png": {
+      "secure_url": "https://res.cloudinary.com/hz875hgf/image/upload/v1794548221/aquaprov/docs/0acf924cae094333/assets/images/modules/measured-series.png",
+      "public_id": "aquaprov/docs/0acf924cae094333/assets/images/modules/measured-series",
+      "resource_type": "image",
+      "sha256": "0acf924cae094333051ebf9ac9b8fba420f54558992db8cdca95c23bb321111c",
+      "bytes": 54031,
+      "content_type": "image/png",
+      "public_verified": true
+    },
+    "assets/images/modules/measured-series.svg": {
+      "secure_url": "https://res.cloudinary.com/hz875hgf/image/upload/v1794548222/aquaprov/docs/fe33dedaf8df1001/assets/images/modules/measured-series.svg",
+      "public_id": "aquaprov/docs/fe33dedaf8df1001/assets/images/modules/measured-series",
+      "resource_type": "image",
+      "sha256": "fe33dedaf8df1001b0808a42ecb55f37558d5d1de0ee3f4d8d0d4041f15e0ce3",
+      "bytes": 47803,
+      "content_type": "image/svg+xml",
+      "public_verified": true
+    },
     "assets/images/modules/si-bar.pdf": {
       "secure_url": "https://res.cloudinary.com/hz875hgf/raw/upload/v1794292741/aquaprov/docs/9f076d3a781f62b6/assets/images/modules/si-bar.pdf",
       "public_id": "aquaprov/docs/9f076d3a781f62b6/assets/images/modules/si-bar.pdf",
@@ -5929,6 +6082,33 @@
       "resource_type": "image",
       "sha256": "30e37fdc560b267d4ffa751650deafb1e3459a36bd718180c401ef6e77e3fe0b",
       "bytes": 6339414,
+      "content_type": "image/svg+xml",
+      "public_verified": true
+    },
+    "assets/images/modules/wqi-dwqi-scatter.pdf": {
+      "secure_url": "https://res.cloudinary.com/hz875hgf/raw/upload/v1794548222/aquaprov/docs/d720f994d954454a/assets/images/modules/wqi-dwqi-scatter.pdf",
+      "public_id": "aquaprov/docs/d720f994d954454a/assets/images/modules/wqi-dwqi-scatter.pdf",
+      "resource_type": "raw",
+      "sha256": "d720f994d954454a5fd488e5ff15775a91bb3d09fde615ccba6cf92de21df9d6",
+      "bytes": 19023,
+      "content_type": "application/pdf",
+      "public_verified": true
+    },
+    "assets/images/modules/wqi-dwqi-scatter.png": {
+      "secure_url": "https://res.cloudinary.com/hz875hgf/image/upload/v1794548222/aquaprov/docs/fa8cde7f216074d6/assets/images/modules/wqi-dwqi-scatter.png",
+      "public_id": "aquaprov/docs/fa8cde7f216074d6/assets/images/modules/wqi-dwqi-scatter",
+      "resource_type": "image",
+      "sha256": "fa8cde7f216074d61ce559b98ca2b275883dc9202ba13fb6214a3edbd37fb562",
+      "bytes": 68192,
+      "content_type": "image/png",
+      "public_verified": true
+    },
+    "assets/images/modules/wqi-dwqi-scatter.svg": {
+      "secure_url": "https://res.cloudinary.com/hz875hgf/image/upload/v1794548222/aquaprov/docs/6b63e1db67ffdb72/assets/images/modules/wqi-dwqi-scatter.svg",
+      "public_id": "aquaprov/docs/6b63e1db67ffdb72/assets/images/modules/wqi-dwqi-scatter",
+      "resource_type": "image",
+      "sha256": "6b63e1db67ffdb720e36925d44fa65ce39c992c8fcc87c3aa5b5c54ac38a84c7",
+      "bytes": 42164,
       "content_type": "image/svg+xml",
       "public_verified": true
     },
@@ -9488,13 +9668,17 @@
       "public_verified": true
     },
     "manual/AquaProv_User_Manual.pdf": {
-      "secure_url": "https://res.cloudinary.com/hz875hgf/raw/upload/v1794292965/aquaprov/docs/d5bcdc2be1fe20c7/manual/AquaProv_User_Manual.pdf",
-      "public_id": "aquaprov/docs/d5bcdc2be1fe20c7/manual/AquaProv_User_Manual.pdf",
+      "secure_url": "https://res.cloudinary.com/hz875hgf/raw/upload/v1794550866/aquaprov/docs/377dc6452e391554/manual/AquaProv_User_Manual.pdf",
+      "public_id": "aquaprov/docs/377dc6452e391554/manual/AquaProv_User_Manual.pdf",
       "resource_type": "raw",
-      "sha256": "d5bcdc2be1fe20c7dcdd3538e00c64e28745ca06000832074eeea956fe46cb8a",
-      "bytes": 4822092,
+      "sha256": "377dc6452e391554e09ec0e6c279a5de5f50f65f9ed8bdc69589e5b932a66349",
+      "bytes": 4293457,
       "content_type": "application/pdf",
-      "public_verified": true
+      "public_verified": true,
+      "previous_urls": [
+        "https://res.cloudinary.com/hz875hgf/image/upload/v1794320771/AquaProv_User_Manual.pdf",
+        "https://res.cloudinary.com/hz875hgf/raw/upload/v1794548225/aquaprov/docs/ee41d1854a077a3a/manual/AquaProv_User_Manual.pdf"
+      ]
     }
   },
   "complete": true

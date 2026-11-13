@@ -67,7 +67,7 @@
         card.hidden=!(module.value==='all'||card.dataset.module===module.value)||!(dataset.value==='all'||card.dataset.dataset===dataset.value)||!terms.every(term=>text.includes(term));
         if(!card.hidden)shown++;
       });
-      count.textContent=`${shown} of ${cards.length} examples shown · ${browser.dataset.registeredViews || 78} registered plot types in the full catalog`;
+      count.textContent=`${shown} of ${cards.length} examples shown · ${browser.dataset.registeredViews || 80} registered plot types in the full catalog`;
       empty.hidden=shown!==0;
     };
     [module,dataset,query].forEach(control=>control.addEventListener('input',render));

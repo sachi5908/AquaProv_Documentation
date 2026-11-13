@@ -301,6 +301,10 @@
 @media (max-width: 360px) {
   :is(.home-page, .docs-page) .site-header .site-brand img { width: 104px; }
 }
+/* Keep step numbers clear of the written instructions at every viewport width. */
+.docs-page .number-list > li { padding-left: 2.75rem; }
+.docs-page .number-list > li::before { content: counter(step, decimal-leading-zero); }
+
 @media print {
   .docs-page, [data-theme="dark"] .docs-page {
     --bg: #fff;
