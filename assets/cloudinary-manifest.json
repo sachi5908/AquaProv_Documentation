@@ -9668,17 +9668,30 @@
       "public_verified": true
     },
     "manual/AquaProv_User_Manual.pdf": {
-      "secure_url": "https://res.cloudinary.com/hz875hgf/raw/upload/v1794550866/aquaprov/docs/377dc6452e391554/manual/AquaProv_User_Manual.pdf",
-      "public_id": "aquaprov/docs/377dc6452e391554/manual/AquaProv_User_Manual.pdf",
+      "secure_url": "https://res.cloudinary.com/hz875hgf/raw/upload/v1794573876/aquaprov/docs/080aeb56f7b1f49b/manual/AquaProv_User_Manual.pdf",
+      "public_id": "aquaprov/docs/080aeb56f7b1f49b/manual/AquaProv_User_Manual.pdf",
       "resource_type": "raw",
-      "sha256": "377dc6452e391554e09ec0e6c279a5de5f50f65f9ed8bdc69589e5b932a66349",
-      "bytes": 4293457,
+      "sha256": "080aeb56f7b1f49b31ca49ba234ad66ab6d9fa8a7164927e864f8d3790a6fc58",
+      "bytes": 4321552,
       "content_type": "application/pdf",
       "public_verified": true,
       "previous_urls": [
         "https://res.cloudinary.com/hz875hgf/image/upload/v1794320771/AquaProv_User_Manual.pdf",
-        "https://res.cloudinary.com/hz875hgf/raw/upload/v1794548225/aquaprov/docs/ee41d1854a077a3a/manual/AquaProv_User_Manual.pdf"
+        "https://res.cloudinary.com/hz875hgf/raw/upload/v1794548225/aquaprov/docs/ee41d1854a077a3a/manual/AquaProv_User_Manual.pdf",
+        "https://res.cloudinary.com/hz875hgf/raw/upload/v1794550866/aquaprov/docs/377dc6452e391554/manual/AquaProv_User_Manual.pdf",
+        "https://res.cloudinary.com/hz875hgf/raw/upload/v1794560646/aquaprov/docs/b619c3921d08e861/manual/AquaProv_User_Manual.pdf",
+        "https://res.cloudinary.com/hz875hgf/raw/upload/v1794562560/aquaprov/docs/2ae32a983b275316/manual/AquaProv_User_Manual.pdf",
+        "https://res.cloudinary.com/hz875hgf/raw/upload/v1794573249/aquaprov/docs/f69551b07139d60f/manual/AquaProv_User_Manual.pdf"
       ]
+    },
+    "assets/images/authors/dr-s-selvakumar.png": {
+      "secure_url": "https://res.cloudinary.com/hz875hgf/image/upload/v1794572608/Dr.-S.-Selvakumar.png",
+      "public_id": "Dr.-S.-Selvakumar",
+      "resource_type": "image",
+      "sha256": "1241d5b794f1e0b7e1f749a779fcbe9390166414f6033c942aa6f5662c301857",
+      "bytes": 26470,
+      "content_type": "image/png",
+      "public_verified": true
     }
   },
   "complete": true

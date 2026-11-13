@@ -409,3 +409,5 @@
   .home-footer-edition { background: transparent; border-color: #ddd; }
   .home-footer-bottom { border-color: #ddd; padding-top: 20px; }
 }
+
+.contributor-affiliation { margin: 10px 0 0; font-size: 11px; line-height: 1.6; color: var(--muted); }
